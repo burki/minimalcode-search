@@ -44,13 +44,13 @@ use Minimalcode\Search\Criteria;
 
     /** @var string ("AND"|"OR"|"") */
     private $operator;
-    
+
     /** @var integer (0|1) */
     private $type;
 
     /******* private class Leaf extends Node ******************************* */
 
-    /** @var Criteria */
+    /** @var Criteria|null */
     private $criteria;
 
     /******* private class Crotch extends Node ***************************** */
@@ -71,9 +71,9 @@ use Minimalcode\Search\Criteria;
      *
      * @param int $type (0|1)
      * @param string $operator ("AND"|"OR"|"")
-     * @param Criteria $criteria make sense only for leaf types
+     * @param Criteria|null $criteria make sense only for leaf types
      */
-    public function __construct($type, $operator, Criteria $criteria = null)
+    public function __construct($type, $operator, ?Criteria $criteria = null)
     {
         $this->operator = $operator;
         $this->criteria = $criteria;
@@ -123,7 +123,7 @@ use Minimalcode\Search\Criteria;
         $crotch->isNegatingWholeChildren = $this->isNegatingWholeChildren;
         $this->isNegatingWholeChildren = false;
         $this->children = [$crotch];
-        
+
         return $this;
     }
 
