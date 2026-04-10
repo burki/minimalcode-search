@@ -1,7 +1,7 @@
 {
-  "name": "minimalcode/search",
+  "name": "burki/minimalcode-search",
   "type": "library",
-  "description": "Fluent Lucene-Sorl Query Builder for PHP",
+  "description": "Fluent Lucene-Sorl Query Builder for PHP, forked from minimalcode/search",
   "keywords": ["solr", "lucene", "query", "builder"],
   "license": "Apache-2.0",
   "authors": [
