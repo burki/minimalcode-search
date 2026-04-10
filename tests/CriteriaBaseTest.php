@@ -2,9 +2,8 @@
 namespace Minimalcode\Search\Tests;
 
 use Minimalcode\Search\Criteria;
-use PHPUnit_Framework_TestCase;
 
-abstract class CriteriaBaseTest extends PHPUnit_Framework_TestCase
+abstract class CriteriaBaseTest extends \PHPUnit\Framework\TestCase
 {
     protected function getField(Criteria $criteria)
     {
